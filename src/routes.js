@@ -3,10 +3,14 @@ const express = require('express');
 const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
 // Adiciona uma rotas de escuta
+
+// Rota de login
+routes.post('/sessions', SessionController.create);
 
 // Rota para listar todas as ongs
 routes.get('/ongs', OngController.listAll);
