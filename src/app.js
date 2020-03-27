@@ -19,5 +19,4 @@ app.use(routes);
 // Diz para a aplicação utilizar o tratador de erros do celebrate
 app.use(errors());
 
-// Ouvir na porta 3333
-app.listen(3333);
+module.exports = app;
